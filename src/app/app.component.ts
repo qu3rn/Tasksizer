@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todo-app';
+  headerLogo = 'assets/Artboard 1-reel1.png'
 }
