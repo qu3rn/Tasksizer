@@ -1,0 +1,44 @@
+.task
+    display: flex
+    padding: 24px 15px
+    background-color:#fff
+    border-bottom: solid 2px #b8b8b8
+    
+    .id
+        flex: 1 1 50px
+    
+    .content
+        flex: 1 1 100%
+
+.task:last-of-type
+    border-bottom: 0 none
+
+.task.done .content
+    text-decoration: line-through
+
+.task-input
+    display: block
+    width: 100%
+    padding: 24px 15px
+    appearance: none
+    border: none
+    background-color: #f3f3f3
+    margin-top: 15px
+    font-size: 20px
+    outline: none
+
+.task-submit
+    display: block
+    width: 100%
+    max-width: 200px
+    appearance: none
+    border: none
+    outline: none
+    background: none
+
+    background-color: #FE4880
+    color: #fff
+    margin: 15px auto
+    padding: 15px 24px
+    font-size: 18px
+    font-weight: 700

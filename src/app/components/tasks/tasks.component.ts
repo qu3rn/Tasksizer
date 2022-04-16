@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Task } from './../../models/task';
+import { Task } from '../../models/task';
 
 @Component({
   selector: 'app-task',
-  templateUrl: './task.component.html',
-  styleUrls: ['./task.component.sass']
+  templateUrl: './tasks.component.html',
+  styleUrls: ['./tasks.component.sass']
 })
-export class TaskComponent implements OnInit {
+export class TasksComponent implements OnInit {
 
   tasks !: Task[];
 
@@ -24,7 +24,7 @@ export class TaskComponent implements OnInit {
       },
       {
         content: 'Third task',
-        completed: false
+        completed: true
       }
     ];
   }
