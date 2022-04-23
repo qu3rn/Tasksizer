@@ -1,8 +1,19 @@
 <div class="tasks-container">
-    <div class="task {{ (task.completed ? 'done' : '') }}" *ngFor="let task of tasks; let i = index;">
+    <form #addTaskForm="ngForm" (submit)="addTask(addTaskForm)">
+        <input 
+            type="text"
+            name="inputTask"
+            placeholder="Enter task..."
+            class="task-input"
+            [(ngModel)]="inputTask"
+            autocomplete="off"
+        />
+        <input type="submit" value="Add Task" class="task-submit"/>
+    </form>
+    <div *ngFor="let task of tasks; let i = index;" class="task {{ (task.completed ? 'done' : '') }}">
         <div class="id">{{ i }}</div>
-        <div class="content"> {{ task.content }}</div>
-        <button class="delete">Remove</button>
+        <div class="content" (click)="toggleDone(i)" > {{ task.content }}</div>
+        <button class="delete" (click)="deleteTask(i)">Remove</button>
     </div>
 </div>
  
